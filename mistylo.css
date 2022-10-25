@@ -49,9 +49,13 @@ nav a:hover{
     background-color: #26f3fa;
 }
 #logo_principal{
-    height: 30rem;
-    width: 40rem;
-    position: relative;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 60px;
+    padding: 15px 20px 15px 20px;
+    margin-left: 100px;
+}
 }
 /* main index */
 .cursos{
@@ -60,6 +64,7 @@ nav a:hover{
     justify-content: space-evenly;
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
+
 }
 
 .curso{
@@ -69,6 +74,7 @@ nav a:hover{
     border-radius: 10px;
     margin: 10px;
     text-align: justify;
+    background-color: antiquewhite
 
 }
 
