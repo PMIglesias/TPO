@@ -53,10 +53,10 @@ body{
 
 }
 #logo_principal{
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
     position: fixed;
-    top:30px;
+    top:25px;
     left: 150px;
 }
 
