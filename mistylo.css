@@ -1,38 +1,42 @@
 html{
     font-size: 62.5%;
-
 }
 @font-face {
     font-family: silkscreen, cursive;
     src: url(https://fonts.googleapis.com/css2?family=Silkscreen&display=swap);
 }
+div{ 
+    text-align:center; padding:30px 8px; 
+}
 body{
     background: rgb(34,193,195);
     background: linear-gradient(135deg, rgba(34,193,195,1) 23%, rgba(253,247,45,1) 100%); 
-}	
-
-#titulo {
-    font-size: 5rem;
-    /* padding: 1.25rem 0rem; */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+#menu
+{
+    width:100%;
+        background-color: #0B243B;
+    overflow: hidden;
     text-align:center;
-    color: #0B243B;
-    animation:flip; 
-    animation-duration: 5s; 
+    font-family:Helvetica, Arial, sans-serif;
+    line-height:1.2;
+    position: fixed;
+    top:0;
 }
- 
+#menu ul
+{
+    width:auto;
+    display:inline-block;
+    color:#EEEEEE;
+    margin:0; 
+    padding:0;
 
-nav{
-    background-color: #0B243B;
-    align-items: center;
-    justify-content: center;
-    /* padding-right: 3rem;
-    padding-left: 3rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem; */
-    position: relative;
-}
-nav a{
-    color:rgb(255, 255, 255);
+} 
+#menu a {
+        color:rgb(255, 255, 255);
     border: #E6E6E6 2px solid;
     border-radius: 0.5rem;
     margin: 1rem;
@@ -42,40 +46,41 @@ nav a{
     display:inline-block;
     position:relative;
     font-family: 'Quicksand', sans-serif;
-    
 }
-nav a:hover{
-    color: #0B243B;
-    background-color: #26f3fa;
+#menu li
+{
+    display:inline-block;
+
 }
 #logo_principal{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 60px;
-    padding: 15px 20px 15px 20px;
-    margin-left: 100px;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top:30px;
+    left: 150px;
 }
+
+#menu a:hover{
+        color: #0B243B;
+    background-color: white;
+    font-weight: 600;
 }
-/* main index */
 .cursos{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
-
 }
 
 .curso{
     width: 300px;
     padding: 15px;
-    border: 2px solid #17202A;
+    border: 3px solid #17202A;
     border-radius: 10px;
     margin: 10px;
     text-align: justify;
-    background-color: antiquewhite;
-
+    background-color: wheat;
 }
 
 .tumbail{
@@ -115,10 +120,15 @@ nav a:hover{
     padding: 1rem;
     color:black;
     text-decoration:solid;
-
 }
-.boton:hover{
-    background-color: #000;
+ 
+.boton a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.boton:hover, .boton a:hover{
+    background-color:#0B243B;
     color: #fff;
 }
 
@@ -171,7 +181,6 @@ nav a:hover{
 
 #lista4 {
     list-style-type: none;
-    list-style-type: decimal !ie; 
     margin: 40px;
     margin-left: 3em;
     padding: 0; 
@@ -221,51 +230,38 @@ nav a:hover{
     font-family: 'Quicksand', sans-serif;
 }
 /* dar stylo a formulario */
+.seccion_contacto{
+    text-align: center;
+}
+#contacto{
+    text-align: center; 
+    margin-left: 0;
+}
 form{
     background-color:gray;
     color:white;
+    border: 2px solid black;
     border-radius: 5px;
     margin: 5px;
-    padding: 5px;
+    padding: 25px 90px;
     text-decoration: none;
     display: inline-block;
-    margin-left: 400px;
     font-size: 20px;
+    text-align: center;
 }
-#nombre{
+label{
+    display: block;
+    padding: 5px;
+}
+input{
     text-align: center;
     border-radius: 2px;
     background-color: #f2f2f2;
     padding: 5px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 
 }
-#apellido{
-    text-align: center;
-    border-radius: 2px;
-    background-color: #f2f2f2;
-    padding: 5px;
-    background-color: black;
-    color: white;
-}
-#email{
-    text-align: center;
-    border-radius: 2px;
-    background-color: #f2f2f2;
-    padding: 5px;
-    background-color: black;
-    color: white;
-}
-#comentarios{
-    text-align: center;
-    border-radius: 2px;
-    background-color: #f2f2f2;
-    padding: 5px;
-    background-color: black;
-    color: white;
-}
-
 
 #form button {
     background-color: #4CAF50;
