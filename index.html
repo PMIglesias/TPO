@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Esta parte hay que modificarla junto al css  -->
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
@@ -17,35 +14,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
-      
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    
-    <link rel="icon" href="./Logos TPO/favicon.ico" type="image/x-icon">
-   
-
-    <script src="https://kit.fontawesome.com/198c1dc03d.js" crossorigin="anonymous"></script>
-
-
+    <!-- App title -->
     <title>Programar es posible</title>
-    <link href="mistylo.css" rel="stylesheet" />
+
+    <!-- Link css file -->
+    <link rel="stylesheet" href="1.css">
+
 </head>
 <body>
-<div>
-<!--start CssMenu-->
-<div id="menu">
-                   <img id="logo_principal" alt="Programar es posible" src="./Logos%20TPO/unlimited3.png">
-    <ul>
+    
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <img class="logo" src="Logos TPO/unlimited3.png" alt="logo" />
+
+        <!-- Menu icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="icono" for="side-menu"><span class="icono-line"></span></label>
+
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
         <li><a  href="#Cursos_gratis">Cursos gratis</a></li>
         <li><a  href="#Cursos_pagos">Cursos pagos</a></li>
         <li><a  href="#Cursos_youtube">Cursos de Youtube</a></li>
         <li><a  href="#Recursos_web">Recursos web</a></li>
         <li><a href="#Preguntas_frecuentes">Preguntas frecuentes</a></li>
-    </ul>
-</div>
-<main>
-        <!-- Seccion 1 = Cursos gratis, donde hay una tabla con 3 columnas y dos filas, en cada fila arriba hay un logo de cada curso y debejo la descripcion -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
         <section>
                 <h2 id="Cursos_gratis" class="secciones">Cursos gratis</h2>
             <!-- crear div principal con 3 div interiores y que cada uno contenga un div tumbail 50% y un div parrafo 30% -->
@@ -89,10 +89,8 @@
                 </div>
             </div>
         </section>
-
-            <!-- Seccion 2 = Cursos pagos, donde hay una tabla con 3 columnas y dos filas, en cada fila arriba hay un logo de cada curso y debejo la descripcion -->
-        <section>
-                <h2 id="Cursos_pagos"class="secciones">Cursos pagos</h2>
+<section>
+    <h2 id="Cursos_pagos"class="secciones">Cursos pagos</h2>
             <!-- crear div principal con 3 div interiores y que cada uno contenga un div tumbail 50% y un div parrafo 30% -->
             <div class="cursos">
                 <div class="curso">
@@ -140,24 +138,25 @@
                     </div>
                 </div>
             </div>
-        </section>
-             <!-- Seccion 3 = Cursos desde youtube de programacion
-            , donde hay 3 ventanas que muestran 3 paginas web a traves de iframe(que muestre el primer video de cada curso) -->
-
-        <section>
-
-            <h2 id="Cursos_youtube" class="secciones">Cursos de youtube</h2>
-
+</section>
+   <section>
+        <h2 id="Cursos_youtube" class="secciones">Cursos de youtube</h2>
+        <div class="iframe-container">
             <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/kN1XP-Bef7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+            
+                <div class="iframe-container">
 
             <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/AXPASVeX74o"target="_blank" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+                <div class="iframe-container">
 
             <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/spMYZHepjko"target="_blank" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
-        </section>
-            <!-- Seccion 4 = recursos web de programacion -->
-        <section>
-                 <h2 id="Recursos_web" class="secciones">Recursos web</h2>
+   </section>
+   <section>                 <h2 id="Recursos_web" class="secciones">Recursos web</h2>
             <div id="lista1">
                 <ul>
                     <li><a href="https://www.w3schools.com/"target="_blank">W3Schools</a></li>
@@ -168,11 +167,10 @@
                     <li><a href="https://www.sololearn.com/"target="_blank">SoloLearn</a></li>
                 </ul>
 
-            </div>  
-        </section>
-            <!-- Seccion 5 = Preguntas frecuentes-->
-        <section>
-                <h2 id="Preguntas_frecuentes" class="secciones">Preguntas frecuentes</h2>
+            </div> 
+    </section>
+    <section>
+                        <h2 id="Preguntas_frecuentes" class="secciones">Preguntas frecuentes</h2>
             <ol id="lista4">
                 <li>¿Qué es un curso?</li>
                     <p class="preg">Un curso es una serie de lecciones que te ayudarán a aprender un tema específico. Cada curso tiene un objetivo y un nivel de dificultad.</p>
@@ -198,9 +196,8 @@
                     <p class="preg">Si quieres ver las ultimas ofertas de empleo, puedes visitar la pagina de <a href="https://www.computrabajo.com/"target="_blank">computrabajo</a></p>
             </ol>
                 <br><br><br><br>
-        </section>
-            <!-- Seccion 6 = Contacto -->
-        <section class="seccion_contacto">
+    </section>
+            <section class="seccion_contacto">
             <h2 id="contacto" class="secciones">Contacto</h2>
             <form action="https://formspree.io/f/mdojlrlo" method="POST">
                 <label for="nombre">Nombre</label>
@@ -217,6 +214,6 @@
             </form>
         </section>
     </main>
-</div>
+
 </body>
 </html>
