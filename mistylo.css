@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html{
     font-size: 62.5%;
 }
@@ -5,91 +10,101 @@ html{
     font-family: silkscreen, cursive;
     src: url(https://fonts.googleapis.com/css2?family=Silkscreen&display=swap);
 }
-div{ 
-    text-align:center; padding:30px 8px; 
-}
 body{
     background: rgb(34,193,195);
     background: linear-gradient(135deg, rgba(34,193,195,1) 23%, rgba(253,247,45,1) 100%); 
-    margin: 0;
-    padding: 0;
-    width: 100vw;
 }
-#menu
-{
-    width:100%;
-        background-color: #0B243B;
-    overflow: hidden;
-    text-align:center;
-    font-family:Helvetica, Arial, sans-serif;
-    line-height:1.2;
-    position: fixed;
-    top:0;
+div{ 
+    text-align:center; 
+    padding:30px 8px; 
 }
-#menu ul
-{
-    width:auto;
-    display:inline-block;
-    color:#EEEEEE;
-    margin:0; 
-    padding:0;
+a{
+    text-decoration: none;
+}
 
-} 
-#menu a {
-        color:rgb(255, 255, 255);
+ul{
+    list-style: none;
+}
+
+/* Header */
+.header{
+    background-color: #0B243B;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100px;
+}
+
+/* Logo */
+.logo{
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 60px;
+    margin: 15px 100px;
+    width: 60px;
+    height: 60px;
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    overflow: hidden;
+    
+}
+
+.menu a{
+    display: block;
     border: #E6E6E6 2px solid;
     border-radius: 0.5rem;
-    margin: 1rem;
-    padding: 0.9rem;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display:inline-block;
-    position:relative;
+    border-spacing: 5px;
+    display: block;
+    margin: 20px 10px 5px 10px;
+    padding: 15px 7.5px 15px 7.5px;
+    color:rgb(255, 255, 255);
     font-family: 'Quicksand', sans-serif;
-}
-#menu li
-{
-    display:inline-block;
-
-}
-#logo_principal{
-    height: 70px;
-    width: 70px;
-    position: fixed;
-    top:25px;
-    left: 150px;
+    font-weight: bold;
 }
 
-#menu a:hover{
-        color: #0B243B;
+.menu li a:hover{
+    color: #0B243B;
     background-color: white;
-    font-weight: 600;
+    font-weight: bold;
 }
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
 .cursos{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-}
+    justify-content: center;
 
+}
 .curso{
     width: 300px;
     padding: 15px;
+        font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
     border: 3px solid #17202A;
     border-radius: 10px;
-    margin: 10px;
+    margin: 5px;
     text-align: justify;
     background-color: wheat;
-}
+    position: relative;
 
+}
 .tumbail{
     height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 #video {
     flex: 3;
     width: 28%;
@@ -100,8 +115,6 @@ body{
     margin-left: 60px;
     align-content: space-between;
 }
-
-
 .secciones {
     font-family: 'Silkscreen', cursive;
     font-size: 4rem;
@@ -110,9 +123,7 @@ body{
     text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin-left: 10rem;
 }
-
 .boton{
-    display:inline-block;
     border: #000 2px solid;
     border-radius: 2rem;
     font-family: 'Wendy One', sans-serif;
@@ -120,18 +131,21 @@ body{
     padding: 1rem;
     color:black;
     text-decoration:solid;
+        position: absolute;
+    bottom: 0;
+    margin-bottom: 5px;
+
 }
  
 .boton a{
-    text-decoration: none;
     color: #000000;
 }
 
 .boton:hover, .boton a:hover{
     background-color:#0B243B;
     color: #fff;
+    
 }
-
 
 /* Recursos web */
 #lista1 ul { 
@@ -162,7 +176,6 @@ body{
     transform:rotate(4deg); box-shadow:10px 10px 20px #000000; 
     margin-left: 10px;
 }
-
 /* Preguntas frecuentes */
 
 #lista4 ol {
@@ -213,16 +226,13 @@ body{
     transform: rotate(-25deg);
     -ms-transform: rotate(-25deg);
     -webkit-transform: rotate(-25deg);
-    z-index: -99;
     overflow: hidden;
-     
     content: counter(li-counter);
     counter-increment: li-counter;
 }
 
 
 .preg{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2rem;
     text-align: left;
     color: rgb(3, 9, 31);
@@ -293,4 +303,94 @@ footer{
     color:white;
     margin: 0px, 6px;
     font-size:2vw;
+}
+/* Menu Icon */
+
+.icono{
+    cursor: pointer;
+    float: right;
+    padding: 45px 30px;
+}
+
+
+.icono-line {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 30px;
+    
+}
+
+.icono-line::before,
+.icono-line::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.icono-line::before{
+    top: 10px;
+}
+
+.icono-line::after{
+    top: -10px;
+}
+
+
+.side-menu {
+    display: none;
+}
+
+/* Toggle menu icon */
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .icono .icono-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .icono .icono-line::before {
+    transform: rotate(-45deg);
+    top:0;
+
+}
+
+.side-menu:checked ~ .icono .icono-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+/* Responsiveness */
+
+@media (min-width: 840px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+
+    }
+
+    .menu li{
+        float: left;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+        color: grey;
+        
+    }
+    
+    .icono{
+        display: none;
+    }
+
 }
